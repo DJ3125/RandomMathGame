@@ -1,0 +1,144 @@
+.GameComponents{
+    visibility: hidden;
+}
+#Start{
+    visibility: hidden;
+}
+#Everything{
+    width: 100%;
+    height: 99.3vh;
+}
+#NavFlexbox{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+#Menu{
+    width: 20%;
+    text-align: center;
+    vertical-align: top;
+    border-right: 5px solid black;
+    overflow-y: hidden;
+}
+#AllGameComponents{
+    width: 80%;
+    vertical-align: top;
+    margin: 5px;
+    text-align: center;
+}
+.NavButton{
+    margin: 5px;
+    height: 5vh;
+    font-size: 2vh;
+    border-radius: 10px;
+}
+#Everything{
+    margin: 0px;
+}
+body,html{
+    margin: 0px;
+    overflow-y: visible;
+}
+#EveryGameComponent{
+    margin: 4px;
+}
+#AllBadges{
+    display: none;
+}
+img{
+    width: 20%;
+    height: 20%;
+    padding: 16px;
+    border: 2px solid black;
+}
+.BadgesClass{
+    width: 80%;
+    text-align: center;
+    horiz-align: center;
+    margin: 20px;
+    border-collapse: collapse;
+}
+table{
+    border-collapse: collapse;
+}
+#AllBadges{
+    overflow-y: scroll;
+    horiz-align: center;
+}
+.BadgeColumns{
+    width: 33%;
+    visibility: hidden;
+    text-align: center;
+    vertical-align: top;
+    border-collapse: collapse;
+    height: 100%;
+}
+#GameNotify{
+    visibility: hidden;
+}
+.BadgeHeaders{
+    visibility: visible;
+    text-align: center;
+}
+#Start2Button{
+    visibility: visible;
+}
+#Notify1{
+    visibility: hidden;
+}
+#HighScores{
+    display: none;
+}
+#BothUsersScores{
+    visibility: hidden;
+    border: 2px solid black;
+    margin: 10px;
+}
+#HighScoreTable{
+    border: 2px solid black;
+    width: 70%;
+    height: 50%;
+    font-size: 20px;
+    margin: 20px;
+    text-align: center;
+}
+.Headers{
+    font-size: 30px;
+    text-align: center;
+}
+#BadgesDescription{
+    text-align: center;
+}
+.OperationHeaders{
+    text-align: center;
+}
+.HighScoreElements{
+    border-bottom: 1px solid black;
+}
+#GameHeader {
+    text-align: center;
+}
+.BothUsersScoreElements{
+    padding: 8px;
+    text-align: center;
+}
+#SubmissionPart{
+    margin: 10px;
+}
+button{
+    margin: 2px;
+}
+.OperationButton,.DifficultyButton, #Back, #StartButton,#Start2Button {
+    margin: 5px;
+    height: 5vh;
+    font-size: 2vh;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 15%;
+}
+p{
+    margin: 5px;
+}
+#Directions{
+    visibility: hidden;
+}

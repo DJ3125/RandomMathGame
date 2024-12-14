@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<table id="Everything">
+    <tr>
+        <td id="Menu">
+            <h2 id="MenuHeader"> Menu </h2>
+            <div id="NavFlexbox">
+                <button type="button" class='NavButton' id="Games" onclick="NavButton('Games')"> Games </button>
+                <button type="button" class='NavButton' id="Badges" onclick="NavButton('Badges')"> Badges </button>
+                <button type="button" class='NavButton' id="HighScore" onclick="NavButton('HighScore')"> High Scores </button>
+                <p id="Notify"></p>
+            </div>
+        </td>
+        <td id="AllGameComponents">
+            <div id="EveryGameComponent">
+                <h1 id="GameHeader"> The Random Math Game! </h1>
+                <hr>
+                <button type="button" id="StartButton" onclick="ButtonPressed('Start')"> Start Game </button>
+                <button type="button" id="Start2Button" onclick="ButtonPressed('Start2')"> Start 2 Player Game </button>
+                <br>
+                <p id="Path"></p>
+                <br>
+                <div class='GameComponents' id="TopButtons">
+                    <button type='button' class='OperationButton' id="AdditionButton" onclick="ButtonPressed('Addition')"> Addition </button>
+                    <button type='button' class='OperationButton' id="SubtractionButton" onclick="ButtonPressed('Subtraction')"> Subtraction </button>
+                    <button type='button' class='OperationButton' id="MultiplicationButton" onclick="ButtonPressed('Multiplication')"> Multiplication </button>
+                    <button type='button' class='OperationButton' id="DivisionButton" onclick="ButtonPressed('Division')"> Division </button>
+                    <button type='button' class='OperationButton' id="MixedButton" onclick="ButtonPressed('Mixed')"> Mixed Operations </button>
+                    <br>
+                    <button type="button" class='DifficultyButton' id="EasyButton" onclick="ButtonPressed('Easy')"> Easy </button>
+                    <button type="button" class='DifficultyButton' id="MediumButton" onclick="ButtonPressed('Medium')"> Medium </button>
+                    <button type="button" class='DifficultyButton' id="HardButton" onclick="ButtonPressed('Hard')"> Hard </button>
+                    <br>
+                    <br>
+                    <button type="button" id="Back" onclick="ButtonPressed('Back')"> Back </button>
+                </div>
+                <div class='GameComponents' id="SubmissionPart">
+                    <p id="PlayerGo"></p>
+                    <p id="AskAndCheck"></p>
+                    <input type="text" id="TextBox" value="Type Here">
+                    <button type="Button" id="SubmitAndContinue" onclick="ButtonPressed('SubmitAndContinue')"> Submit </button>
+                    <p id="QuestionsAnswered"></p>
+                    <p id="GameNotify"> You Gained a New Badge! </p>
+                    <p id="Notify1"> You Got A New High Score </p>
+                    <p id="score"></p>
+                </div>
+                <p id="Directions"> Both Players, Answer Questions Correctly. To win, one player must answer a round correctly while the other player answers incorectly. As time goes on, the questions get harder and harder. </p>
+                <table id="BothUsersScores">
+                    <tr>
+                        <th class="BothUsersScoreElements"> Players </th>
+                        <th class="BothUsersScoreElements" id="User1"></th>
+                        <th class="BothUsersScoreElements" id="User2"></th>
+                    </tr>
+                    <tr>
+                        <td class="BothUsersScoreElements" id="AnswersCorrect"> Answers Correct </td>
+                        <td class="BothUsersScoreElements" id="User1Correct">0</td>
+                        <td class="BothUsersScoreElements" id="User2Correct">0</td>
+                    </tr>
+                    <tr>
+                        <td class="BothUsersScoreElements" id="PercentCorrect"> % Correct </td>
+                        <td class="BothUsersScoreElements" id="User1%">0</td>
+                        <td class="BothUsersScoreElements" id="User2%">0</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="AllBadges">
+                <h1 class='Headers' id="BadgesHeader"> Badges Earned </h1>
+                <p id="BadgesDescription"> Here are All the Badges You've Earned </p>
+                <hr>
+                <h3 class="OperationHeaders"> Addition Badges </h3>
+                <p class='BadgeHeaders' id="AdditionBadgeHeader"> You Have No Addition Badges </p>
+                <table class='BadgesClass' id="AdditionBadges">
+                    <tr>
+                        <td class="BadgeColumns"><img class='Plus1' id='A1' src="Pictures/A1Pic.png"></td>
+                        <td class="BadgeColumns"><img class='Plus2' id='A2' src="Pictures/A2Pic.jfif"></td>
+                        <td class="BadgeColumns"><img class='Plus3' id='A3' src="Pictures/A3Pic.jpg"></td>
+                    </tr>
+                    <tr>
+                        <td class="BadgeColumns"><p class='Plus1' id="A1Describe"> Answer 5 Addition Questions Correctly </p></td>
+                        <td class="BadgeColumns"><p class="Plus2" id="A2Describe"> Answer 10 Addition Questions Correctly </p></td>
+                        <td class="BadgeColumns"><p class="Plus3" id="A3Describe"> Answer 15 Addition Questions Correctly </p></td>
+                    </tr>
+                </table>
+                <hr>
+                <h3 class="OperationHeaders"> Subtraction Badges </h3>
+                <p class='BadgeHeaders' id="SubtractionBadgeHeader"> You Have No Subtraction Badges </p>
+                <table class='BadgesClass' id="SubtractionBadges">
+                    <tr>
+                        <td class="BadgeColumns"><img class='Minus1' id='S1' src="Pictures/S1Badge.jpg"></td>
+                        <td class="BadgeColumns"><img class='Minus2' id='S2' src="Pictures/S2Badge.jpg"></td>
+                        <td class="BadgeColumns"><img class='Minus3' id='S3' src="Pictures/S3Badge.png"></td>
+                    </tr>
+                    <tr>
+                        <td class="BadgeColumns"><p class='Minus1' id="S1Describe"> Answer 5 Subtraction Questions Correctly </p></td>
+                        <td class="BadgeColumns"><p class="Minus2" id="S2Describe"> Answer 10 Subtraction Questions Correctly </p></td>
+                        <td class="BadgeColumns"><p class="Minus3" id="S3Describe"> Answer 15 Subtraction Questions Correctly </p></td>
+                    </tr>
+                </table>
+                <hr>
+                <h3 class="OperationHeaders"> Multiplication Badges </h3>
+                <p class='BadgeHeaders' id="MultiplicationBadgeHeader"> You Have No Multiplication Badges </p>
+                <table class='BadgesClass' id="MultiplicationBadges">
+                    <tr>
+                        <td class="BadgeColumns"><img class='Times1' id='M1' src="Pictures/M1Badge.png"></td>
+                        <td class="BadgeColumns"><img class='Times2' id='M2' src="Pictures/M2Badge.jpg"></td>
+                        <td class="BadgeColumns"><img class='Times3' id='M3' src="Pictures/M3Badge.png"></td>
+                    </tr>
+                    <tr>
+                        <td class="BadgeColumns"><p class='Times1' id="M1Describe"> Answer 5 Multiplication Questions Correctly </p></td>
+                        <td class="BadgeColumns"><p class="Times2" id="M2Describe"> Answer 10 Multiplication Questions Correctly </p></td>
+                        <td class="BadgeColumns"><p class="Times3" id="M3Describe"> Answer 15 Multiplication Questions Correctly </p></td>
+                    </tr>
+                </table>
+                <hr>
+                <h3 class="OperationHeaders"> Division Badges </h3>
+                <p class='BadgeHeaders' id="DivisionBadgeHeader"> You Have No Division Badges </p>
+                <table class='BadgesClass' id="DivisionBadges">
+                    <tr>
+                        <td class="BadgeColumns"><img class='Divided1' id='D1' src="Pictures/D1Badge.png"></td>
+                        <td class="BadgeColumns"><img class='Divided2' id='D2' src="Pictures/D2Badge.jpg"></td>
+                        <td class="BadgeColumns"><img class='Divided3' id='D3' src="Pictures/D3Badge.png"></td>
+                    </tr>
+                    <tr>
+                        <td class="BadgeColumns"><p class='Divided1' id="D1Describe"> Answer 5 Division Questions Correctly </p></td>
+                        <td class="BadgeColumns"><p class="Divided2" id="D2Describe"> Answer 10 Division Questions Correctly </p></td>
+                        <td class="BadgeColumns"><p class="Divided3" id="D3Describe"> Answer 15 Division Questions Correctly </p></td>
+                    </tr>
+                </table>
+                <hr>
+                <h3 class="OperationHeaders"> Mixed Badges </h3>
+                <p class='BadgeHeaders' id="MixedBadgeHeader"> You Have No Mixed Badges </p>
+                <table class='BadgesClass' id="MixedBadges">
+                    <tr>
+                        <td class="BadgeColumns"><img class='Mixed1' id='M1' src="Pictures/Mixed1.jpg"></td>
+                        <td class="BadgeColumns"><img class='Mixed2' id='M2' src="Pictures/Mixed2.jpg"></td>
+                        <td class="BadgeColumns"><img class='Mixed3' id='M3' src="Pictures/Mixed3.jpg"></td>
+                    </tr>
+                    <tr>
+                        <td class="BadgeColumns"><p class='Mixed1' id="M1Describe"> Answer 5 Mixed Questions Correctly </p></td>
+                        <td class="BadgeColumns"><p class="Mixed2" id="M2Describe"> Answer 10 Mixed Questions Correctly </p></td>
+                        <td class="BadgeColumns"><p class="Mixed3" id="M3Describe"> Answer 15 Mixed Questions Correctly </p></td>
+                    </tr>
+                </table>
+                <hr>
+                <h3 class="OperationHeaders"> Other Badges </h3>
+                <p class='BadgeHeaders' id="OtherBadgeHeader"> You Have No Other Badges </p>
+                <table class='BadgesClass' id="OtherBadges">
+                    <tr>
+                        <td class="BadgeColumns"><img class='o1' id='O1' src="Pictures/O1Badge.jpg"></td>
+                        <td class="BadgeColumns"><img class='o2' id='O2' src="Pictures/O2Badge.jpg"></td>
+                        <td class="BadgeColumns"><img class='o3' id='O3' src="Pictures/O3Badge.jpg"></td>
+                    </tr>
+                    <tr>
+                        <td class="BadgeColumns"><p class="o1" id="O1Describe"> Complete Each Level on Hard </p></td>
+                        <td class="BadgeColumns"><p class="o2" id="O2Describe"> Have A High Score of At Least 100 For Each Level </p></td>
+                        <td class="BadgeColumns"><p class="o3" id="O3Describe"> Be Perfect Throughout Each Level </p></td>
+                    </tr>
+                </table>
+                <hr>
+            </div>
+            <div id="HighScores">
+                <h3 class='Headers' id="ScoreHeader"> HighScores </h3>
+                <hr>
+                <table id="HighScoreTable">
+                    <tr>
+                        <th class="HighScoreElements"> Operation </th>
+                        <th class="HighScoreElements"> High Score </th>
+                        <th class="HighScoreElements"> Highest Percentage </th>
+                        <th class="HighScoreElements"> Highest Difficulty Attempted </th>
+                    </tr>
+                    <tr>
+                        <td class="HighScoreElements"> Addition </td>
+                        <td class="HighScoreElements" id="AdditionScore"></td>
+                        <td class="HighScoreElements" id="AdditionPercent"></td>
+                        <td class="HighScoreElements" id="AdditionDifficulty"></td>
+                    </tr>
+                    <tr>
+                        <td class="HighScoreElements"> Subtraction </td>
+                        <td class="HighScoreElements" id="SubtractionScore"></td>
+                        <td class="HighScoreElements" id="SubtractionPercent"></td>
+                        <td class="HighScoreElements" id="SubtractionDifficulty"></td>
+                    </tr>
+                    <tr>
+                        <td class="HighScoreElements"> Multiplication</td>
+                        <td class="HighScoreElements" id="MultiplicationScore"></td>
+                        <td class="HighScoreElements" id="MultiplicationPercent"></td>
+                        <td class="HighScoreElements" id="MultiplicationDifficulty"></td>
+                    </tr>
+                    <tr>
+                        <td class="HighScoreElements"> Division </td>
+                        <td class="HighScoreElements" id="DivisionScore"></td>
+                        <td class="HighScoreElements" id="DivisionPercent"></td>
+                        <td class="HighScoreElements" id="DivisionDifficulty"></td>
+                    </tr>
+                    <tr>
+                        <td class="HighScoreElements"> Mixed Operations </td>
+                        <td class="HighScoreElements" id="MixedScore"></td>
+                        <td class="HighScoreElements" id="MixedPercent"></td>
+                        <td class="HighScoreElements" id="MixedDifficulty"></td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
